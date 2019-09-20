@@ -5,6 +5,12 @@
   "extends": ["eslint:recommended", "airbnb", "plugin:react/recommended"],
   "parser": "babel-eslint",
   "rules": {
+    "no-mixed-operators": 0,
+    "no-continue": 0,
+    "class-methods-use-this": 0,
+    "react/prefer-stateless-function": 0,
+    "lines-between-class-members": 0,
+    "react/jsx-props-no-spreading": 0,
     "eqeqeq": 0,
     "no-param-reassign": 0,
     "global-require": 0,
@@ -29,6 +35,19 @@
           ["@", "./src"]
         ]
       }
+    }
+  },
+  "overrides": [
+    {
+        "files": ["./config/*.js"],
+        "rules": {
+          "import/no-extraneous-dependencies": 0
+        }
+    }
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "legacyDecorators": true
     }
   }
 }
